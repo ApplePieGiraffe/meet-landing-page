@@ -1,3 +1,13 @@
+:root {
+	--color-sea-green: hsl(192, 37%, 48%);
+	--color-dark-purple: hsl(258, 34%, 53%);
+	--color-light-purple: hsl(268, 100%, 86%);
+	--color-grey: hsl(240, 10%, 57%);
+	--color-dark-grey: hsl(240, 21%, 20%);
+	--color-cyan: hsl(192, 90%, 77%);
+	--color-white: hsl(0, 0%, 98%);
+}
+
 *,
 *::before,
 *::after {
@@ -10,4 +20,20 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+}
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.heading {
+	color: var(--color-dark-grey);
+	font-weight: 900;
+}
+
+.paragraph {
+	color: var(--color-grey);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.625;
 }

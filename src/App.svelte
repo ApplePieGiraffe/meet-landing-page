@@ -1,8 +1,8 @@
 <script>
-
+  import Hero from './components/Hero.svelte'
 </script>
 
-<h1>Hello, world.</h1>
+<Hero/>
 
 <style>
 
