@@ -37,3 +37,10 @@ body {
 	font-weight: 500;
 	line-height: 1.625;
 }
+
+@media only screen and (min-width: 48rem) {
+	.paragraph {
+		font-size: 1.125rem;
+		line-height: 1.45;
+	}
+}
