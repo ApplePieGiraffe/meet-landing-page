@@ -35,9 +35,9 @@
 <style>
   .hero {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 30rem) 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    grid-row-gap: 3rem;
+    grid-gap: 4rem 2rem;
     min-height: 100vh;
     padding: 3rem 0;
   }
@@ -48,7 +48,7 @@
   }
 
   .hero-content {
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,46 +72,79 @@
     gap: 1rem;
   }
 
+  /* sides */
+
   .hero-side {
+    grid-row: 3 / 4;
     display: grid;
-    grid-template-columns: repeat(3, 110px);
-    grid-column-gap: 2rem;
-    grid-row-gap: 1.75rem;
+    grid-template-columns: repeat(3, 55px);
+    grid-gap: .875rem 1rem;
     align-content: start;
     min-width: 0;
     height: 100%;
-    /* background: papayawhip; */
     overflow: hidden;
+  }
+
+  .hero-side img {
+    width: 55px;
   }
 
   .hero-side-left {
     justify-content: end;
-    padding-top: 3.75rem;
+    padding-top: 1.5rem;
   }
 
   .hero-side-left img:nth-child(2),
   .hero-side-left img:nth-child(5) {
-    margin-top: -3.75rem;
+    margin-top: -1.5rem;
   }
 
   .hero-side-right {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
 
   .hero-side-right img:nth-child(1),
   .hero-side-right img:nth-child(3),
   .hero-side-right img:nth-child(4),
   .hero-side-right img:nth-child(6) {
-    margin-top: -3.25rem;
+    margin-top: -1.25rem;
   }
 
   @media only screen and (min-width: 26rem) {
-    .hero {
-      grid-template-columns: 1fr minmax(0, 32rem) 1fr;
-    }
-
     .buttons {
       flex-direction: row;
+    }
+
+    /* sides */
+
+    .hero-side {
+      grid-template-columns: repeat(3, 110px);
+      grid: 1.75rem 2rem;
+    }
+
+    .hero-side img {
+      width: 110px;
+    }
+
+    .hero-side-left {
+      justify-content: end;
+      padding-top: 3.75rem;
+    }
+
+    .hero-side-left img:nth-child(2),
+    .hero-side-left img:nth-child(5) {
+      margin-top: -3.75rem;
+    }
+
+    .hero-side-right {
+      padding-top: 3.75rem;
+    }
+
+    .hero-side-right img:nth-child(1),
+    .hero-side-right img:nth-child(3),
+    .hero-side-right img:nth-child(4),
+    .hero-side-right img:nth-child(6) {
+      margin-top: -3.25rem;
     }
   }
 
@@ -123,11 +156,23 @@
     }
 
     .hero-content {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
       padding-top: 3rem;
     }
 
     .paragraph {
       max-width: 36rem;
+    }
+
+    /* sides */
+
+    .hero-side {
+      grid-row: 2 / 3;
+    }
+
+    .hero-side-right {
+      padding-top: 7rem;
     }
   }
 </style>
