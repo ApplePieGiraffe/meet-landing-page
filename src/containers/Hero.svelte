@@ -1,7 +1,7 @@
 <script>
   import Logo from '../components/Logo.svelte'
   import Heading from '../components/Heading.svelte'
-  import Button from '../components/Button.svelte'
+  import Link from '../components/Link.svelte'
 </script>
 
 <section class="hero">
@@ -17,9 +17,9 @@
   <div class="hero-content">
     <Heading/>
     <p class="paragraph">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-    <div class="buttons">
-      <Button color="green">Download <span>v1.3</span></Button>
-      <Button color="purple">What is it?</Button>
+    <div class="links">
+      <Link href="/" color="green">Download <span>v1.3</span></Link>
+      <Link href="/" color="purple">What is it?</Link>
     </div>
   </div>
   <div class="hero-side hero-side-right">
@@ -65,7 +65,7 @@
     text-align: center;
   }
 
-  .buttons {
+  .links {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +111,7 @@
   }
 
   @media only screen and (min-width: 26rem) {
-    .buttons {
+    .links {
       flex-direction: row;
     }
 

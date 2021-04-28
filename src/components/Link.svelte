@@ -1,25 +1,26 @@
 <script>
+  export let href
   export let color
 </script>
 
-<button class="btn {color}">
+<a href={href} class="link {color}">
   <slot></slot>
-</button>
+</a>
 
 <style>
-  .btn {
+  .link {
     border: none;
     border-radius: 100rem;
     padding: 1rem 2rem;
     color: white;
-    line-height: 1.625rem;
     font-size: 1rem;
     font-weight: 900;
-    cursor: pointer;
+    line-height: 1.625rem;
+    text-decoration: none;
     transition: opacity .3s;
   }
 
-  .btn:hover {
+  .link:hover {
     opacity: .6;
   }
 

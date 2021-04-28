@@ -5,3 +5,8 @@ const app = new App({
 })
 
 export default app
+
+// scroll to top on page load
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+}

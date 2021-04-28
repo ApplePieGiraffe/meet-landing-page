@@ -3,7 +3,3 @@
 </script>
 
 <Hero/>
-
-<style>
-
-</style>
