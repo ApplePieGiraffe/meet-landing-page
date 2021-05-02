@@ -1,7 +1,53 @@
 <script>
+  import { onMount } from 'svelte'
+
+  gsap.registerPlugin(ScrollTrigger)
+
   import Logo from '../components/Logo.svelte'
   import Heading from '../components/Heading.svelte'
   import Link from '../components/Link.svelte'
+
+  onMount(() => {
+    const contentAnimation = gsap.timeline()
+    contentAnimation.from('.logo-link', { duration: 1.5, opacity: 0 })
+      .from('.heading', { duration: 1.5, opacity: 0 }, .5)
+      .from('.paragraph', { duration: 1, opacity: 0, y: 25 }, 1)
+      .from('.link', { duration: 1, stagger: .2, opacity: 0, y: 25 }, 1.5)
+    
+    const avatarAnimation = gsap.timeline()
+    avatarAnimation.from('.hero-side-left img:nth-child(2)', { duration: 1.5, scale: 0 }, 1.5)
+      .from('.hero-side-right img:nth-child(4)', { duration: 1.5, scale: 0 }, '-=1')
+      .from('.hero-side-left img:nth-child(4)', { duration: 1.5, scale: 0 }, '-=1')
+      .from('.hero-side-right img:nth-child(2)', { duration: 1.5, scale: 0 }, '-=.75')
+      .from('.hero-side-left img:nth-child(6)', { duration: 1.5, scale: 0 }, '-=1')
+      .from('.hero-side-right img:nth-child(6)', { duration: 1.5, scale: 0 }, '-=1.5')
+      .from('.hero-side-left img:nth-child(3)', { duration: 1.5, scale: 0 }, '-=1')
+      .from('.hero-side-right img:nth-child(5)', { duration: 1.5, scale: 0 }, '-=1.25')
+      .from('.hero-side-left img:nth-child(5)', { duration: 1.5, scale: 0 }, '-=.75')
+      .from('.hero-side-right img:nth-child(1)', { duration: 1.5, scale: 0 }, '-=1.5')
+      .from('.hero-side-left img:nth-child(1)', { duration: 1.5, scale: 0 }, '-=1.5')
+      .from('.hero-side-right img:nth-child(3)', { duration: 1.5, scale: 0 }, '-=1')
+
+    ScrollTrigger.create({
+      animation: contentAnimation,
+      trigger: '.hero',
+      start: 'top top',
+      end: '+=2000',
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    })
+
+    ScrollTrigger.create({
+      animation: avatarAnimation,
+      trigger: '.hero',
+      start: 'top top',
+      end: '+=2000',
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    })
+  })
 </script>
 
 <section class="hero">
@@ -123,6 +169,8 @@
     }
 
     .hero-side img {
+      position: relative;
+      z-index: 100;
       width: 110px;
     }
 

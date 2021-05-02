@@ -24,6 +24,7 @@ html, body {
 
 body {
 	font-family: 'Red Hat Display', sans-serif;
+	/* overflow-x: hidden; */
 }
 
 .heading {

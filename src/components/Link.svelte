@@ -20,12 +20,12 @@
     transition: opacity .3s;
   }
 
-  .link:hover {
-    opacity: .6;
-  }
-
   .green {
     background: var(--color-sea-green);
+  }
+
+  .green:hover {
+    background: hsl(192, 37%, 48%, .6);
   }
 
   :global(.green span) {
@@ -34,6 +34,10 @@
 
   .purple {
     background: var(--color-dark-purple);
+  }
+
+  .purple:hover {
+    background: hsl(258, 34%, 53%, .6);
   }
 
   :global(.purple span) {
