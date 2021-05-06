@@ -1,65 +1,27 @@
 <script>
   import { onMount } from 'svelte'
 
-  gsap.registerPlugin(ScrollTrigger)
-
   import Logo from '../components/Logo.svelte'
   import Heading from '../components/Heading.svelte'
   import Link from '../components/Link.svelte'
 
+  // animations
+
+  import { 
+    heroContentAnimation, 
+    heroAvatarsAnimation 
+  } from '../scripts/timelines'
+
+  gsap.registerPlugin(ScrollTrigger)
+
   onMount(() => {
-    const contentAnimation = gsap.timeline()
-    contentAnimation.from('.logo-link', { duration: 1.5, opacity: 0 })
-      .from('.heading', { duration: 1.5, opacity: 0 }, .5)
-      .from('.paragraph', { duration: 1, opacity: 0, y: 25 }, 1)
-      .from('.link', { duration: 1, stagger: .2, opacity: 0, y: 25 }, 1.5)
-    
-    const avatarAnimation = gsap.timeline()
-    avatarAnimation.from('.hero-side-left img:nth-child(2)', { duration: 1.5, scale: 0 }, 1.5)
-      .from('.hero-side-right img:nth-child(4)', { duration: 1.5, scale: 0 }, '-=1')
-      .from('.hero-side-left img:nth-child(4)', { duration: 1.5, scale: 0 }, '-=1')
-      .from('.hero-side-right img:nth-child(2)', { duration: 1.5, scale: 0 }, '-=.75')
-      .from('.hero-side-left img:nth-child(6)', { duration: 1.5, scale: 0 }, '-=1')
-      .from('.hero-side-right img:nth-child(6)', { duration: 1.5, scale: 0 }, '-=1.5')
-      .from('.hero-side-left img:nth-child(3)', { duration: 1.5, scale: 0 }, '-=1')
-      .from('.hero-side-right img:nth-child(5)', { duration: 1.5, scale: 0 }, '-=1.25')
-      .from('.hero-side-left img:nth-child(5)', { duration: 1.5, scale: 0 }, '-=.75')
-      .from('.hero-side-right img:nth-child(1)', { duration: 1.5, scale: 0 }, '-=1.5')
-      .from('.hero-side-left img:nth-child(1)', { duration: 1.5, scale: 0 }, '-=1.5')
-      .from('.hero-side-right img:nth-child(3)', { duration: 1.5, scale: 0 }, '-=1')
-
-    ScrollTrigger.create({
-      animation: contentAnimation,
-      trigger: '.hero',
-      start: 'top top',
-      end: '+=2000',
-      scrub: true,
-      pin: true,
-      anticipatePin: 1
-    })
-
-    ScrollTrigger.create({
-      animation: avatarAnimation,
-      trigger: '.hero',
-      start: 'top top',
-      end: '+=2000',
-      scrub: true,
-      pin: true,
-      anticipatePin: 1
-    })
+    heroContentAnimation()
+    heroAvatarsAnimation()
   })
 </script>
 
 <section class="hero">
   <Logo/>
-  <div class="hero-side hero-side-left">
-    <img src="/assets/images/shared/avatar-left-1.png" alt="">
-    <img src="/assets/images/shared/avatar-left-2.png" alt="">
-    <img src="/assets/images/shared/avatar-left-3.png" alt="">
-    <img src="/assets/images/shared/avatar-left-4.png" alt="">
-    <img src="/assets/images/shared/avatar-left-5.png" alt="">
-    <img src="/assets/images/shared/avatar-left-6.png" alt="">
-  </div>
   <div class="hero-content">
     <Heading/>
     <p class="paragraph">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
@@ -67,6 +29,14 @@
       <Link href="/" color="green">Download <span>v1.3</span></Link>
       <Link href="/" color="purple">What is it?</Link>
     </div>
+  </div>
+  <div class="hero-side hero-side-left">
+    <img src="/assets/images/shared/avatar-left-1.png" alt="">
+    <img src="/assets/images/shared/avatar-left-2.png" alt="">
+    <img src="/assets/images/shared/avatar-left-3.png" alt="">
+    <img src="/assets/images/shared/avatar-left-4.png" alt="">
+    <img src="/assets/images/shared/avatar-left-5.png" alt="">
+    <img src="/assets/images/shared/avatar-left-6.png" alt="">
   </div>
   <div class="hero-side hero-side-right">
     <img src="/assets/images/shared/avatar-right-1.png" alt="">
@@ -84,7 +54,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     grid-gap: 4rem 2rem;
-    min-height: 100vh;
     padding: 3rem 0;
   }
 

@@ -3,5 +3,5 @@
   import Features from './containers/Features.svelte'
 </script>
 
-<Hero/>
-<Features/>
+  <Hero/>
+  <Features/>
