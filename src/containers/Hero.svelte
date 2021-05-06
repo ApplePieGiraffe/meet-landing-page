@@ -14,10 +14,10 @@
 
   gsap.registerPlugin(ScrollTrigger)
 
-  // onMount(() => {
-  //   heroContentAnimation()
-  //   heroAvatarsAnimation()
-  // })
+  onMount(() => {
+    heroContentAnimation()
+    heroAvatarsAnimation()
+  })
 </script>
 
 <section class="hero">
@@ -200,7 +200,7 @@
   @media only screen and (min-width: 64rem) {
     .hero {
       grid-gap: 3.5rem 4.25rem;
-      padding: 5rem 0 7rem;
+      padding: 5rem 0 6.75rem;
     }
 
     .hero-content {
