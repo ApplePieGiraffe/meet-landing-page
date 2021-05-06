@@ -14,10 +14,10 @@
 
   gsap.registerPlugin(ScrollTrigger)
 
-  onMount(() => {
-    heroContentAnimation()
-    heroAvatarsAnimation()
-  })
+  // onMount(() => {
+  //   heroContentAnimation()
+  //   heroAvatarsAnimation()
+  // })
 </script>
 
 <section class="hero">
@@ -53,7 +53,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    grid-gap: 4rem 2rem;
+    grid-gap: 4rem 1rem;
     padding: 3rem 0;
   }
 
@@ -115,7 +115,7 @@
   }
 
   .hero-side-right {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 
   .hero-side-right img:nth-child(1),
@@ -126,6 +126,10 @@
   }
 
   @media only screen and (min-width: 26rem) {
+    .hero {
+      grid-gap: 4rem 2rem;
+    }
+
     .links {
       flex-direction: row;
     }
@@ -133,14 +137,14 @@
     /* sides */
 
     .hero-side {
-      grid-template-columns: repeat(3, 110px);
+      grid-template-columns: repeat(3, 90px);
       grid: 1.75rem 2rem;
     }
 
     .hero-side img {
       position: relative;
       z-index: 100;
-      width: 110px;
+      width: 90px;
     }
 
     .hero-side-left {
@@ -168,14 +172,14 @@
   @media only screen and (min-width: 48rem) {
     .hero {
       grid-template-columns: 1fr 36rem 1fr;
-      grid-gap: 3.5rem 4.25rem;
+      grid-gap: 2.5rem 3.5rem;
       padding: 5rem 0;
     }
 
     .hero-content {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-      padding-top: 3rem;
+      padding-top: 1.5rem;
     }
 
     .paragraph {
@@ -190,6 +194,17 @@
 
     .hero-side-right {
       padding-top: 7rem;
+    }
+  }
+
+  @media only screen and (min-width: 64rem) {
+    .hero {
+      grid-gap: 3.5rem 4.25rem;
+      padding: 5rem 0 7rem;
+    }
+
+    .hero-content {
+      padding-top: 3rem;
     }
   }
 </style>
