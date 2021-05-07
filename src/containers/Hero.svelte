@@ -12,8 +12,6 @@
     heroAvatarsAnimation 
   } from '../scripts/timelines'
 
-  gsap.registerPlugin(ScrollTrigger)
-
   // onMount(() => {
   //   heroContentAnimation()
   //   heroAvatarsAnimation()

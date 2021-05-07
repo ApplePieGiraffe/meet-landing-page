@@ -43,3 +43,40 @@ export function heroAvatarsAnimation() {
     .from('.hero-side-right img:nth-child(3)', { duration: 1.5, scale: 0 }, '-=1')
   return timeline
 }
+
+export function featureImgsAnimation() {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.feature',
+      start: 'top 50%',
+      scrub: true,
+      markers: true
+    }
+  })
+  timeline
+    .from('.feature-imgs', { 
+      duration: 1.5
+    }, 0)
+    .from('.feature-img-container:nth-child(1)', { 
+      duration: .5,
+      maxWidth: 0
+    },  0)
+    .from('.feature-img-container:nth-child(2)', { 
+      duration: .5,
+      maxHeight: 0
+    },0)
+    .from('.feature-img-container:nth-child(3)', { 
+      duration: .5,
+      maxWidth: 0
+    }, 0)
+    .from('.feature-img-container:nth-child(4)', { 
+      duration: .5,
+      maxHeight: 0
+    }, 0)
+    .from('.feature-imgs img', { 
+      duration: .5,
+      scale: 1.5,
+      opacity: 0
+    }, 0)
+  return timeline
+}

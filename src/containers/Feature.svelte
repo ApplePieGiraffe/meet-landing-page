@@ -1,32 +1,10 @@
 <script>
   import { onMount } from 'svelte'
 
-  onMount(() => {
-    const timeline = gsap.timeline()
+  import { featureImgsAnimation } from '../scripts/timelines'
 
-    timeline
-      .from('.feature-img-container:nth-child(1)', { 
-        duration: 1,
-        maxWidth: 0
-      }, .5)
-      .from('.feature-img-container:nth-child(2)', { 
-        duration: 1,
-        maxHeight: 0
-      }, .5)
-      .from('.feature-img-container:nth-child(3)', { 
-        duration: 1,
-        maxWidth: 0
-      }, .5)
-      .from('.feature-img-container:nth-child(4)', { 
-        duration: 1,
-        maxHeight: 0
-      }, .5)
-      .from('.feature-imgs img', { 
-        duration: 1,
-        scale: 1.5,
-        // opacity: 0, 
-        // stagger: .3
-      }, .5)
+  onMount(() => {
+    featureImgsAnimation()
   })
 </script>
 
@@ -72,7 +50,6 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 16rem));
     gap: 1.5rem;
-    min-height: 15.5rem;
   }
 
   .feature-img-container {
