@@ -14,10 +14,10 @@
 
   gsap.registerPlugin(ScrollTrigger)
 
-  onMount(() => {
-    heroContentAnimation()
-    heroAvatarsAnimation()
-  })
+  // onMount(() => {
+  //   heroContentAnimation()
+  //   heroAvatarsAnimation()
+  // })
 </script>
 
 <section class="hero">

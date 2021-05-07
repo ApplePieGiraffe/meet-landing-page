@@ -7,13 +7,14 @@
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.divider',
-        // scrub: true
+        start: 'top 70%',
+        toggleActions: 'play none none reset'
       }
     })
     timeline
-      .from('.divider-line', { duration: .8, opacity: .5, scaleY: 0 })
-      .from('.divider-circle', { duration: .8, scale: .25 }, '-=.3')
-      .from('.divider-text', { duration: 1, opacity: 0 })
+      .from('.divider-line', { duration: .7, opacity: .5, scaleY: 0 })
+      .from('.divider-circle', { duration: .7, scale: 0 }, '-=.5')
+      .from('.divider-text', { duration: 1, opacity: 0 }, '-=.1')
   })
 
   export let text
@@ -32,8 +33,6 @@
     flex-direction: column;
     align-items: center;
     height: 8.75rem;
-    /* border-top: 1px solid tomato;
-    border-bottom: 1px solid tomato; */
   }
 
   .divider-line {
