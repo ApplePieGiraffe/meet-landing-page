@@ -31,6 +31,14 @@ body {
 	font-weight: 900;
 }
 
+.subheading {
+	color: var(--color-sea-green);
+	font-weight: 900;
+	font-size: 1rem;
+	letter-spacing: .25rem;
+	text-transform: uppercase;
+}
+
 .paragraph {
 	color: var(--color-grey);
 	font-size: 1rem;

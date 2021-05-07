@@ -1,3 +1,5 @@
+// hero
+
 export function heroContentAnimation() {
   const timeline = gsap.timeline({
     scrollTrigger: {
@@ -44,13 +46,14 @@ export function heroAvatarsAnimation() {
   return timeline
 }
 
+// feature
+
 export function featureImgsAnimation() {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.feature',
       start: 'top 50%',
-      scrub: true,
-      markers: true
+      scrub: true
     }
   })
   timeline

@@ -12,10 +12,10 @@
     heroAvatarsAnimation 
   } from '../scripts/timelines'
 
-  // onMount(() => {
-  //   heroContentAnimation()
-  //   heroAvatarsAnimation()
-  // })
+  onMount(() => {
+    heroContentAnimation()
+    heroAvatarsAnimation()
+  })
 </script>
 
 <section class="hero">
@@ -91,7 +91,7 @@
     grid-row: 3 / 4;
     display: grid;
     grid-template-columns: repeat(3, 55px);
-    grid-gap: .875rem 1rem;
+    gap: .875rem 1rem;
     align-content: start;
     min-width: 0;
     height: 100%;
@@ -136,12 +136,9 @@
 
     .hero-side {
       grid-template-columns: repeat(3, 90px);
-      grid: 1.75rem 2rem;
     }
 
     .hero-side img {
-      position: relative;
-      z-index: 100;
       width: 90px;
     }
 
@@ -188,10 +185,16 @@
 
     .hero-side {
       grid-row: 2 / 3;
+      grid-template-columns: repeat(3, 110px);
+      gap: 1.75rem;
     }
 
     .hero-side-right {
       padding-top: 7rem;
+    }
+
+    .hero-side img {
+      width: 110px;
     }
   }
 
