@@ -22,7 +22,7 @@
   <Logo/>
   <div class="hero-content">
     <Heading/>
-    <p class="paragraph">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+    <p class="paragraph hero-description">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
     <div class="links">
       <Link href="/" color="green">Download <span>v1.3</span></Link>
       <Link href="/" color="purple">What is it?</Link>

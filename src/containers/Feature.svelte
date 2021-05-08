@@ -1,10 +1,14 @@
 <script>
   import { onMount } from 'svelte'
 
-  import { featureImgsAnimation } from '../scripts/timelines'
+  import { 
+    featureImgsAnimation ,
+    featureContentAnimation
+  } from '../scripts/timelines'
 
   onMount(() => {
     featureImgsAnimation()
+    featureContentAnimation()
   })
 </script>
 

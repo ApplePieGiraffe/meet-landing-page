@@ -1,14 +1,12 @@
 <script>
   import { onMount } from 'svelte'
 
-  gsap.registerPlugin(ScrollTrigger)
-
   onMount(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.divider',
         start: 'top 70%',
-        toggleActions: 'play none none reset'
+        toggleActions: 'play none none reverse'
       }
     })
     timeline

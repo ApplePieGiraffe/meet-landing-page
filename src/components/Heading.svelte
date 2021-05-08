@@ -1,4 +1,4 @@
-<h1 class="heading heading-hero">Group Chat for Everyone</h1>
+<h1 class="heading hero-heading">Group Chat for Everyone</h1>
 
 <style>
   h1 {
