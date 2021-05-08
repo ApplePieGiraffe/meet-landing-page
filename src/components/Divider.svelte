@@ -1,27 +1,32 @@
 <script>
   import { onMount } from 'svelte'
+  import { DividerAnimation } from '../scripts/timelines'
+
+  // onMount(() => {
+  //   const timeline = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: '.divider',
+  //       start: 'top 60%',
+  //       toggleActions: 'play none none reverse',
+  //     }
+  //   })
+  //   timeline
+  //     .from('.divider-line', { duration: .7, opacity: .5, scaleY: 0 })
+  //     .from('.divider-circle', { duration: .7, scale: 0 }, '-=.5')
+  //     .from('.divider-text', { duration: 1, opacity: 0 }, '-=.1')
+  // })
+  
+  export let id
 
   onMount(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.divider',
-        start: 'top 70%',
-        toggleActions: 'play none none reverse'
-      }
-    })
-    timeline
-      .from('.divider-line', { duration: .7, opacity: .5, scaleY: 0 })
-      .from('.divider-circle', { duration: .7, scale: 0 }, '-=.5')
-      .from('.divider-text', { duration: 1, opacity: 0 }, '-=.1')
+    DividerAnimation(id)
   })
-
-  export let text
 </script>
 
-<div class="divider">
+<div class="divider divider-{id}">
   <div class="divider-line"></div>
   <div class="divider-circle">
-    <span class="divider-text">{text}</span>
+    <span class="divider-text">{id}</span>
   </div>
 </div>
 
@@ -37,7 +42,7 @@
     width: 1px;
     height: 100%;
     transform-origin: top center;
-    background: hsl(240, 10%, 57%, .25);
+    background: hsl(240, 10%, 57%, .5);
   }
 
   .divider-circle {
@@ -47,7 +52,7 @@
     justify-content: center;
     width: 3.5rem;
     height: 3.5rem;
-    border: 1px solid hsl(240, 10%, 57%, .25);
+    border: 1px solid hsl(240, 10%, 57%, .5);
     border-radius: 50%;
   }
 

@@ -90,12 +90,28 @@ export function featureContentAnimation() {
       trigger: '.feature-content',
       start: 'top 50%',
       toggleActions: 'play none none reverse',
-      markers: true
     }
   })
   timeline
     .from('.feature-subheading', { duration: 2, opacity: 0 }, 0)
     .from('.feature-heading', { duration: 2, opacity: 0 }, .3)
     .from('.feature-description', { duration: 1, opacity: 0, y: 15 }, .5)
+  return timeline
+}
+
+// dividers
+
+export function DividerAnimation(id) {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: `.divider-${id}`,
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
+    }
+  })
+  timeline
+    .from(`.divider-${id} .divider-line`, { duration: .7, opacity: .5, scaleY: 0 })
+    .from(`.divider-${id} .divider-circle`, { duration: .7, scale: 0 }, '-=.5')
+    .from(`.divider-${id} .divider-text`, { duration: 1, opacity: 0 }, '-=.1')
   return timeline
 }
