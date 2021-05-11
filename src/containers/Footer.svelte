@@ -1,5 +1,11 @@
 <script>
+  import { onMount } from 'svelte'
   import Link from '../components/Link.svelte'
+  import { footerAnimation } from '../scripts/timelines'
+
+  onMount(() => {
+    footerAnimation()
+  })
 </script>
 
 <footer class="footer">

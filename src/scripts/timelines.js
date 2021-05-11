@@ -99,6 +99,21 @@ export function featureContentAnimation() {
   return timeline
 }
 
+// footer
+
+export function footerAnimation() {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.footer',
+      start: '20% bottom',
+      toggleActions: 'play none none reset'
+    }
+  })
+  timeline
+    .from('.footer-content > *', { duration: 1, opacity: 0, stagger: .5 })
+  return timeline
+}
+
 // dividers
 
 export function DividerAnimation(id) {
@@ -106,7 +121,7 @@ export function DividerAnimation(id) {
     scrollTrigger: {
       trigger: `.divider-${id}`,
       start: 'top 60%',
-      toggleActions: 'play none none reverse',
+      toggleActions: 'play none none reverse'
     }
   })
   timeline

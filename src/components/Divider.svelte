@@ -5,7 +5,9 @@
   export let id
 
   onMount(() => {
-    DividerAnimation(id)
+    ScrollTrigger.matchMedia({
+      '(max-height: 1000px)': () => DividerAnimation(id)
+    })
   })
 </script>
 
