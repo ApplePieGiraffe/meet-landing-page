@@ -31,6 +31,10 @@ body {
 	font-weight: 900;
 }
 
+.heading--white {
+	color: var(--color-white);
+}
+
 .subheading {
 	color: var(--color-sea-green);
 	font-weight: 900;

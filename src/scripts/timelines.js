@@ -15,7 +15,7 @@ export function heroContentAnimation() {
     .from('.logo-link', { duration: 1.5, opacity: 0 })
     .from('.hero-heading', { duration: 1.5, opacity: 0 }, 0.5)
     .from('.hero-description', { duration: 1, opacity: 0, y: 25 }, 1)
-    .from('.link', { duration: 1, stagger: 0.2, opacity: 0, y: 25 }, 1.5)
+    .from('.hero .link', { duration: 1, stagger: 0.2, opacity: 0, y: 25 }, 1.5)
   return timeline
 }
 

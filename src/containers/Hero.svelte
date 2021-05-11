@@ -12,10 +12,10 @@
     heroAvatarsAnimation 
   } from '../scripts/timelines'
 
-  onMount(() => {
-    heroContentAnimation()
-    heroAvatarsAnimation()
-  })
+  // onMount(() => {
+  //   heroContentAnimation()
+  //   heroAvatarsAnimation()
+  // })
 </script>
 
 <section class="hero">
@@ -67,7 +67,7 @@
     align-items: center;
   }
 
-  :global(.heading) {
+  :global(.hero-heading) {
     margin-bottom: 2rem;
   }
 

@@ -17,7 +17,7 @@
     font-weight: 900;
     line-height: 1.625rem;
     text-decoration: none;
-    transition: opacity .3s;
+    transition: background .3s;
   }
 
   .green {
@@ -25,7 +25,7 @@
   }
 
   .green:hover {
-    background: hsl(192, 37%, 48%, .6);
+    background: hsl(192, 54%, 64%);
   }
 
   :global(.green span) {
@@ -37,7 +37,7 @@
   }
 
   .purple:hover {
-    background: hsl(258, 34%, 53%, .6);
+    background: hsl(268, 55%, 71%);
   }
 
   :global(.purple span) {

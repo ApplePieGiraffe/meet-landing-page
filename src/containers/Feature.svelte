@@ -51,7 +51,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     padding: 4rem 1.5rem;
   }
 
