@@ -105,7 +105,7 @@ export function footerAnimation() {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.footer',
-      start: '20% bottom',
+      start: '25% bottom',
       toggleActions: 'play none none reset'
     }
   })

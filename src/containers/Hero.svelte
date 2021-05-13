@@ -12,10 +12,10 @@
     heroAvatarsAnimation 
   } from '../scripts/timelines'
 
-  // onMount(() => {
-  //   heroContentAnimation()
-  //   heroAvatarsAnimation()
-  // })
+  onMount(() => {
+    heroContentAnimation()
+    heroAvatarsAnimation()
+  })
 </script>
 
 <section class="hero">
