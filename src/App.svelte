@@ -8,20 +8,20 @@
   import Feature from './containers/Feature.svelte'
   import Footer from './containers/Footer.svelte'
   
-  onMount(() => {
-    gsap.registerPlugin(ScrollTrigger)
+  // onMount(() => {
+  //   gsap.registerPlugin(ScrollTrigger)
 
-    // const smoothScroll = Scrollbar.init(document.querySelector('body'))
+  //   const smoothScroll = Scrollbar.init(document.querySelector('body'))
 
-    // ScrollTrigger.scrollerProxy('body', {
-    //   scrollTop(value) {
-    //     if (arguments.length) {
-    //       smoothScroll.scrollTop = value;
-    //     }
-    //     return smoothScroll.scrollTop
-    //   }
-    // })
-  })
+  //   ScrollTrigger.scrollerProxy('body', {
+  //     scrollTop(value) {
+  //       if (arguments.length) {
+  //         smoothScroll.scrollTop = value;
+  //       }
+  //       return smoothScroll.scrollTop
+  //     }
+  //   })
+  // })
 
   let showScroll = true
 

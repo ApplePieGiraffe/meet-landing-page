@@ -1,4 +1,8 @@
-<div class="scroll">
+<script>
+  import { fade } from 'svelte/transition'
+</script>
+
+<div class="scroll" transition:fade="{{ duration: 150 }}">
   <h4 class="scroll-text"><span>Scroll</span> to see stuff.</h4>
   <div class="mouse">
     <div class="mouse-wheel"></div>
@@ -40,7 +44,7 @@
     top: 20%;
     left: 39%;
     transform-origin: top center;
-    width: 5px;
+    width: 4px;
     height: 6px;
     border-radius: 10rem;
     background: var(--color-dark-purple);
@@ -53,8 +57,8 @@
       transform: translate(0);
       opacity: 0;
     }
-    10% {
-      opacity: 1;
+    15% {
+      opacity: 0;
     }
     50% {
       height: 12px;
