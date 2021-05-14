@@ -10,7 +10,7 @@
 
   import { initAnimations } from './scripts/animations'
 
-  let showScroll
+  let showScroll = true
   
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -33,6 +33,7 @@
 
     smoothScroll.addListener(() => {
       ScrollTrigger.update()
+      showScroll = smoothScroll.scrollTop === 0 ? true : false
     })
 
     ScrollTrigger.defaults({ scroller: scroller })

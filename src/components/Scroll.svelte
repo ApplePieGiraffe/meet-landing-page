@@ -42,7 +42,7 @@
   .mouse-wheel {
     position: absolute;
     top: 20%;
-    left: 39%;
+    left: 50%;
     transform-origin: top center;
     width: 4px;
     height: 6px;
@@ -54,7 +54,7 @@
   @keyframes scroll {
     0% {
       height: 6px;
-      transform: translate(0);
+      transform: translate(-50%, 0);
       opacity: 0;
     }
     15% {
@@ -65,7 +65,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateY(8px);
+      transform: translate(-50%, 8px);
       opacity: 0;
     }
   }
