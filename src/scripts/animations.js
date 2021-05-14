@@ -52,7 +52,7 @@ export function featureImgsAnimation() {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.feature',
-      start: 'top 50%',
+      start: 'top 55%',
       scrub: true
     }
   })
@@ -105,12 +105,12 @@ export function footerAnimation() {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.footer',
-      start: '25% bottom',
+      start: '35% bottom',
       toggleActions: 'play none none reset'
     }
   })
   timeline
-    .from('.footer-content > *', { duration: 1, opacity: 0, stagger: .5 })
+    .from('.footer-content > *', { delay: .5, duration: 1, opacity: 0, stagger: .5 })
   return timeline
 }
 
@@ -120,7 +120,7 @@ export function dividerAnimation(id) {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: `.divider-${id}`,
-      start: 'top 60%',
+      start: 'top 70%',
       toggleActions: 'play none none reverse'
     }
   })
