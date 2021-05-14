@@ -8,21 +8,14 @@
   import Feature from './containers/Feature.svelte'
   import Footer from './containers/Footer.svelte'
 
-  import { 
-    heroContentAnimation, 
-    heroAvatarsAnimation,
-    featureImgsAnimation,
-    featureContentAnimation,
-    footerAnimation,
-    dividerAnimation
-  } from './scripts/timelines'
+  import { initAnimations } from './scripts/animations'
 
   let showScroll
   
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-    const scroller = document.body
+    const scroller = document.querySelector('.scroll-container')
 
     const smoothScroll = Scrollbar.init(
       scroller,
@@ -42,26 +35,19 @@
       ScrollTrigger.update()
     })
 
-    ScrollTrigger.defaults({ 
-			scroller: scroller,
-			pinType: 'transform'
-		})
+    ScrollTrigger.defaults({ scroller: scroller })
 
-    heroContentAnimation()
-    heroAvatarsAnimation()
-    dividerAnimation(1)
-    featureImgsAnimation()
-    featureContentAnimation()
-    dividerAnimation(2)
-    footerAnimation()
+    initAnimations()
   })
 </script>
 
 {#if showScroll}
   <Scroll/>
 {/if}
-<Hero/>
-<Divider id="1"/>
-<Feature/>
-<Divider id="2"/>
-<Footer/>
+<div class="scroll-container">
+  <Hero/>
+  <Divider id="1"/>
+  <Feature/>
+  <Divider id="2"/>
+  <Footer/>
+</div>

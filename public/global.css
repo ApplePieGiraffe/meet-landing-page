@@ -8,6 +8,8 @@
 	--color-white: hsl(0, 0%, 98%);
 }
 
+/* base */
+
 *,
 *::before,
 *::after {
@@ -25,6 +27,8 @@ html, body {
 body {
 	font-family: 'Red Hat Display', sans-serif;
 }
+
+/* utilities */
 
 .heading {
 	color: var(--color-dark-grey);
@@ -55,4 +59,18 @@ body {
 		font-size: 1.125rem;
 		line-height: 1.45;
 	}
+}
+
+/* scroll */
+
+.scroll-container {
+	height: 100vh;
+}
+
+.scrollbar-thumb {
+	background: hsl(192, 37%, 48%, .75) !important;
+}
+
+.scrollbar-track {
+	background: hsl(192, 37%, 48%, .3) !important;
 }

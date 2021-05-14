@@ -130,3 +130,15 @@ export function dividerAnimation(id) {
     .from(`.divider-${id} .divider-text`, { duration: 1, opacity: 0 }, '-=.1')
   return timeline
 }
+
+// all
+
+export function initAnimations() {
+  heroContentAnimation()
+  heroAvatarsAnimation()
+  dividerAnimation(1)
+  featureImgsAnimation()
+  featureContentAnimation()
+  dividerAnimation(2)
+  footerAnimation()
+}
