@@ -116,7 +116,7 @@ export function footerAnimation() {
 
 // dividers
 
-export function DividerAnimation(id) {
+export function dividerAnimation(id) {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: `.divider-${id}`,

@@ -1,21 +1,7 @@
 <script>
-  import { onMount } from 'svelte'
-
   import Logo from '../components/Logo.svelte'
   import Heading from '../components/Heading.svelte'
   import Link from '../components/Link.svelte'
-
-  // animations
-
-  import { 
-    heroContentAnimation, 
-    heroAvatarsAnimation 
-  } from '../scripts/timelines'
-
-  onMount(() => {
-    heroContentAnimation()
-    heroAvatarsAnimation()
-  })
 </script>
 
 <section class="hero">

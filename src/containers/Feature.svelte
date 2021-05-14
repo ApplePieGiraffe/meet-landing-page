@@ -1,17 +1,3 @@
-<script>
-  import { onMount } from 'svelte'
-
-  import { 
-    featureImgsAnimation ,
-    featureContentAnimation
-  } from '../scripts/timelines'
-
-  onMount(() => {
-    featureImgsAnimation()
-    featureContentAnimation()
-  })
-</script>
-
 <section class="feature">
   <div class="feature-imgs">
     <div class="feature-img-container">

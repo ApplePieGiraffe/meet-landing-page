@@ -1,14 +1,5 @@
-<script>
-  import { onMount } from 'svelte'
-  import { DividerAnimation } from '../scripts/timelines'
-  
+<script>  
   export let id
-
-  onMount(() => {
-    ScrollTrigger.matchMedia({
-      '(max-height: 1000px)': () => DividerAnimation(id)
-    })
-  })
 </script>
 
 <div class="divider divider-{id}">

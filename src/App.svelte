@@ -1,32 +1,59 @@
 <script>
   import { onMount } from 'svelte'
-  // import Scrollbar from 'smooth-scrollbar'
+  import Scrollbar from 'smooth-scrollbar'
 
   import Scroll from './components/Scroll.svelte'
   import Hero from './containers/Hero.svelte'
   import Divider from './components/Divider.svelte'
   import Feature from './containers/Feature.svelte'
   import Footer from './containers/Footer.svelte'
+
+  import { 
+    heroContentAnimation, 
+    heroAvatarsAnimation,
+    featureImgsAnimation,
+    featureContentAnimation,
+    footerAnimation,
+    dividerAnimation
+  } from './scripts/timelines'
+
+  let showScroll
   
-  // onMount(() => {
-  //   gsap.registerPlugin(ScrollTrigger)
+  onMount(() => {
+    gsap.registerPlugin(ScrollTrigger)
 
-  //   const smoothScroll = Scrollbar.init(document.querySelector('body'))
+    const scroller = document.body
 
-  //   ScrollTrigger.scrollerProxy('body', {
-  //     scrollTop(value) {
-  //       if (arguments.length) {
-  //         smoothScroll.scrollTop = value;
-  //       }
-  //       return smoothScroll.scrollTop
-  //     }
-  //   })
-  // })
+    const smoothScroll = Scrollbar.init(
+      scroller,
+      { damping: 0.1, delegateTo: document, alwaysShowTracks: true }
+    )
 
-  let showScroll = true
+    ScrollTrigger.scrollerProxy(scroller, {
+      scrollTop(value) {
+        if (arguments.length) {
+          smoothScroll.scrollTop = value
+        }
+        return smoothScroll.scrollTop
+      }
+    })
 
-  window.addEventListener('scroll', (e) => {
-    showScroll = window.scrollY === 0 ? true : false
+    smoothScroll.addListener(() => {
+      ScrollTrigger.update()
+    })
+
+    ScrollTrigger.defaults({ 
+			scroller: scroller,
+			pinType: 'transform'
+		})
+
+    heroContentAnimation()
+    heroAvatarsAnimation()
+    dividerAnimation(1)
+    featureImgsAnimation()
+    featureContentAnimation()
+    dividerAnimation(2)
+    footerAnimation()
   })
 </script>
 
