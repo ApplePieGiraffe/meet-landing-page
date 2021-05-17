@@ -39,14 +39,14 @@
 
     ScrollTrigger.defaults({ scroller: scroller })
 
-    initAnimations()
+    // initAnimations()
   })
 </script>
 
-{#if showScroll}
+<!-- {#if showScroll}
   <Scroll/>
   <Attribution/>
-{/if}
+{/if} -->
 <div class="scroll-container">
   <Hero/>
   <Divider id="1"/>

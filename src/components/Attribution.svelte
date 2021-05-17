@@ -32,7 +32,11 @@
   out:fade="{{ duration: 150 }}">
   <img class="apple" src="/assets/images/shared/apple.png" alt="">
   <img class="pie" src="/assets/images/shared/pie.png" alt="">
-  <button class="attribution-btn" on:click={toggleAnimation}>
+  <button 
+    class="attribution-btn" 
+    aria-label="toggle attribution" 
+    on:click={toggleAnimation}
+  >
     <img class="giraffe" src="/assets/images/shared/giraffe.png" alt="">
   </button>
   <div class="bubble-wrapper">
