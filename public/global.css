@@ -65,7 +65,7 @@ body {
 /* scroll */
 
 .scroll-container {
-	/* height: 100vh; */
+	height: 100vh;
 }
 
 .scrollbar-thumb {
