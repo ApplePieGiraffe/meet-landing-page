@@ -5,7 +5,7 @@
 <div class="divider divider-{id}">
   <div class="divider-line"></div>
   <div class="divider-circle">
-    <span class="divider-text">{id}</span>
+    <span class="divider-text">0{id}</span>
   </div>
 </div>
 

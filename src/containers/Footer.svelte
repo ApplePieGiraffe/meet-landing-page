@@ -12,9 +12,10 @@
 
 <style>
   .footer {
+    --gradient: linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85));
     margin-top: -2rem;
     background: 
-      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
+      var(--gradient), 
       url('/assets/images/mobile/image-footer.jpg');
     background-size: cover;
   }
@@ -47,7 +48,7 @@
   @media (min-width: 48rem) {
     .footer {
       background: 
-      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
+      var(--gradient), 
       url('/assets/images/tablet/image-footer.jpg');
       background-size: cover;
     }
@@ -67,7 +68,7 @@
   @media (min-width: 64rem) {
     .footer {
       background: 
-      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
+      var(--gradient), 
       url('/assets/images/desktop/image-footer.jpg');
       background-size: cover;
       background-position: center;
