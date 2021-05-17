@@ -1,39 +1,32 @@
 <script>
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
+  import { attributionAnimation } from '../scripts/animations'
 
-  let timeline
-
+  let animation
+  let hover
+  let initial = true
+  
   onMount(() => {
-    timeline = gsap.timeline({ paused: true })
-    timeline
-      .to('.attribution-btn', { duration: .5, x: 20, y: -65 })
-      .from('.bubble-wrapper', { 
-        duration: .5, 
-        scale: .6, 
-        x: -60, 
-        y: 120, 
-        opacity: 0 
-      }, 0)
-      .from('.apple', { 
-        duration: .7, 
-        ease: 'power2.out',
-        scale: .6, 
-        rotate: 120, 
-        x: -60, 
-        y: -10,
-        opacity: 0
-      }, 0)
-      .from('.pie', { 
-        duration: .7, 
-        ease: 'power2.out',
-        scale: .6, 
-        rotate: -120, 
-        x: -60, 
-        y: 120,
-        opacity: 0 
-      }, 0)
+    animation = attributionAnimation()
+    animation.eventCallback('onStart', () => {
+      initial = false
+    })
+    animation.eventCallback('onReverseComplete', () => {
+      initial = true
+    })
+    hover = gsap.to('.attribution button', { 
+      duration: .2, 
+      y: '-10', 
+      paused: true
+    })
   })
+
+  function toggleAnimation() {
+    animation.reversed() ? 
+      animation.timeScale(1).play() : 
+      animation.timeScale(1.5).reverse()
+  }
 </script>
 
 <div 
@@ -42,7 +35,12 @@
   out:fade="{{ duration: 150 }}">
   <img class="apple" src="/assets/images/shared/apple.png" alt="">
   <img class="pie" src="/assets/images/shared/pie.png" alt="">
-  <button class="attribution-btn" on:click={() => timeline.play()}>
+  <button 
+    class="attribution-btn"
+    on:click={toggleAnimation}
+    on:mouseover={() => { initial ? hover.play() : ''}}
+    on:mouseleave={() => { initial ? hover.reverse() : ''}}
+  >
     <img class="giraffe" src="/assets/images/shared/giraffe.png" alt="">
   </button>
   <div class="bubble-wrapper">
@@ -73,6 +71,7 @@
     bottom: 14.5rem;
     left: 1.25rem;
     width: 3rem;
+    transform-origin: center;
   }
 
   .pie {
@@ -80,12 +79,14 @@
     bottom: 1.5rem;
     left: 8rem;
     width: 4.5rem;
+    transform-origin: center;
   }
 
-  .attribution-btn {
+  button {
     position: absolute;
     right: -7rem;
     bottom: -5rem;
+    z-index: 1;
     border: none;
     background: none;
     cursor: pointer;

@@ -131,7 +131,7 @@ export function dividerAnimation(id) {
   return timeline
 }
 
-// all
+// main
 
 export function initAnimations() {
   heroContentAnimation()
@@ -141,4 +141,35 @@ export function initAnimations() {
   featureContentAnimation()
   dividerAnimation(2)
   footerAnimation()
+}
+
+// attribution
+
+export function attributionAnimation() {
+  const timeline = gsap.timeline({ paused: true, reversed: true })
+  timeline
+    .to('.attribution button', { duration: .3, x: 20, y: -65 })
+    .from('.bubble-wrapper', { 
+      duration: .3, 
+      scale: .6, 
+      x: -60, 
+      y: 120, 
+      opacity: 0 
+    }, 0)
+    .from('.apple', { 
+      duration: .6, 
+      ease: 'power2.out',
+      scale: .6, 
+      rotate: 120, 
+      y: 300
+    }, 0)
+    .from('.pie', { 
+      duration: .6, 
+      ease: 'power2.out',
+      scale: .6, 
+      rotate: -120, 
+      x: -140, 
+      y: 80
+    }, 0)
+  return timeline
 }

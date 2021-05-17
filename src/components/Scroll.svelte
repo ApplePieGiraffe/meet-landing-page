@@ -21,6 +21,7 @@
   }
 
   .scroll-text {
+    width: max-content;
     margin-bottom: 1rem;
     color: var(--color-sea-green);
     font-size: 1.5rem;
