@@ -3,6 +3,7 @@
   import Scrollbar from 'smooth-scrollbar'
 
   import Scroll from './components/Scroll.svelte'
+  import Attribution from './components/Attribution.svelte'
   import Hero from './containers/Hero.svelte'
   import Divider from './components/Divider.svelte'
   import Feature from './containers/Feature.svelte'
@@ -44,6 +45,7 @@
 
 {#if showScroll}
   <Scroll/>
+  <Attribution/>
 {/if}
 <div class="scroll-container">
   <Hero/>
