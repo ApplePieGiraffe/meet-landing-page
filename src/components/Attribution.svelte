@@ -30,17 +30,17 @@
   class="attribution" 
   in:fly="{{ duration: 250, y: 100 }}" 
   out:fade="{{ duration: 150 }}">
-  <img class="apple" src="/assets/images/shared/apple.png" alt="">
-  <img class="pie" src="/assets/images/shared/pie.png" alt="">
+  <img class="apple" src="/assets/images/shared/attribution/apple.png" alt="">
+  <img class="pie" src="/assets/images/shared/attribution/pie.png" alt="">
   <button 
     class="attribution-btn" 
     aria-label="toggle attribution" 
     on:click={toggleAnimation}
   >
-    <img class="giraffe" src="/assets/images/shared/giraffe.png" alt="">
+    <img class="giraffe" src="/assets/images/shared/attribution/giraffe.png" alt="">
   </button>
   <div class="bubble-wrapper">
-    <img class="bubble" src="/assets/images/shared/bubble.png" alt="">
+    <img class="bubble" src="/assets/images/shared/attribution/bubble.png" alt="">
     <div class="attribution-text">
       <span>Challenge by</span>
       <a href="/" target="_blank">Frontend Mentor</a>

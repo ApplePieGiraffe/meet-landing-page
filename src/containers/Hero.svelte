@@ -15,20 +15,20 @@
     </div>
   </div>
   <div class="hero-side hero-side-left">
-    <img src="/assets/images/shared/avatar-left-1.png" alt="">
-    <img src="/assets/images/shared/avatar-left-2.png" alt="">
-    <img src="/assets/images/shared/avatar-left-3.png" alt="">
-    <img src="/assets/images/shared/avatar-left-4.png" alt="">
-    <img src="/assets/images/shared/avatar-left-5.png" alt="">
-    <img src="/assets/images/shared/avatar-left-6.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-1.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-2.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-3.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-4.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-5.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-left-6.png" alt="">
   </div>
   <div class="hero-side hero-side-right">
-    <img src="/assets/images/shared/avatar-right-1.png" alt="">
-    <img src="/assets/images/shared/avatar-right-2.png" alt="">
-    <img src="/assets/images/shared/avatar-right-3.png" alt="">
-    <img src="/assets/images/shared/avatar-right-4.png" alt="">
-    <img src="/assets/images/shared/avatar-right-5.png" alt="">
-    <img src="/assets/images/shared/avatar-right-6.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-1.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-2.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-3.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-4.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-5.png" alt="">
+    <img src="/assets/images/shared/avatars/avatar-right-6.png" alt="">
   </div>
 </section>
 
