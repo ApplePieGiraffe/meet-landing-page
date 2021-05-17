@@ -49,8 +49,8 @@
 {/if} -->
 <div class="scroll-container">
   <Hero/>
-  <Divider id="1"/>
+  <Divider id="01"/>
   <Feature/>
-  <Divider id="2"/>
+  <Divider id="02"/>
   <Footer/>
 </div>
