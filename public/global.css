@@ -25,6 +25,7 @@ html, body {
 }
 
 body {
+	background: var(--color-white);
 	font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -64,7 +65,7 @@ body {
 /* scroll */
 
 .scroll-container {
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .scrollbar-thumb {
