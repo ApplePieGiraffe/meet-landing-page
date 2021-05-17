@@ -1,7 +1,29 @@
 <script>
+  import { onMount } from 'svelte'
+
   import Logo from '../components/Logo.svelte'
   import Heading from '../components/Heading.svelte'
   import Link from '../components/Link.svelte'
+
+  import { replaceImages } from '../scripts/utilities'
+  import { avatars, fmAvatars } from '../scripts/data'
+
+  let original = true
+
+  function toggleAvatars(e) {
+    console.log(e[0])
+    if (!e[0].isIntersecting) {
+      replaceImages('.hero-side img', original ? fmAvatars : avatars)
+      original = !original
+    }
+  }
+
+  onMount(() => {
+    const observer = new IntersectionObserver(toggleAvatars, {
+      threshold: 0
+    })
+    observer.observe(document.querySelector('.hero-content'))
+  })
 </script>
 
 <section class="hero">
@@ -126,6 +148,7 @@
 
     .hero-side img {
       width: 90px;
+      border-radius: 50%;
     }
 
     .hero-side-left {
