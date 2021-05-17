@@ -14,7 +14,7 @@
   .footer {
     margin-top: -2rem;
     background: 
-      linear-gradient(hsl(192, 37%, 48%, .8), hsl(192, 37%, 48%, .8)), 
+      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
       url('/assets/images/mobile/image-footer.jpg');
     background-size: cover;
   }
@@ -47,7 +47,7 @@
   @media (min-width: 48rem) {
     .footer {
       background: 
-      linear-gradient(hsl(192, 37%, 48%, .8), hsl(192, 37%, 48%, .8)), 
+      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
       url('/assets/images/tablet/image-footer.jpg');
       background-size: cover;
     }
@@ -67,7 +67,7 @@
   @media (min-width: 64rem) {
     .footer {
       background: 
-      linear-gradient(hsl(192, 37%, 48%, .8), hsl(192, 37%, 48%, .8)), 
+      linear-gradient(hsl(192, 37%, 48%, .85), hsl(192, 37%, 48%, .85)), 
       url('/assets/images/desktop/image-footer.jpg');
       background-size: cover;
       background-position: center;
