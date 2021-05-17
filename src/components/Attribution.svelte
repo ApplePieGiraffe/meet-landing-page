@@ -4,28 +4,25 @@
   import { attributionAnimation } from '../scripts/animations'
 
   let animation
-  let hover
-  let initial = true
+  let pop = new Audio('/assets/audio/pop.mp3')
+  let whoosh = new Audio('/assets/audio/whoosh.mp3')
   
   onMount(() => {
     animation = attributionAnimation()
-    animation.eventCallback('onStart', () => {
-      initial = false
-    })
-    animation.eventCallback('onReverseComplete', () => {
-      initial = true
-    })
-    hover = gsap.to('.attribution button', { 
-      duration: .2, 
-      y: '-10', 
-      paused: true
-    })
   })
 
   function toggleAnimation() {
-    animation.reversed() ? 
-      animation.timeScale(1).play() : 
+    if (animation.reversed()) {
+      animation.timeScale(1).play()
+      setTimeout(() => {
+        pop.play()
+      }, 350)
+    } else {
       animation.timeScale(1.5).reverse()
+      setTimeout(() => {
+        whoosh.play()
+      }, 300)
+    }
   }
 </script>
 
@@ -35,12 +32,7 @@
   out:fade="{{ duration: 150 }}">
   <img class="apple" src="/assets/images/shared/apple.png" alt="">
   <img class="pie" src="/assets/images/shared/pie.png" alt="">
-  <button 
-    class="attribution-btn"
-    on:click={toggleAnimation}
-    on:mouseover={() => { initial ? hover.play() : ''}}
-    on:mouseleave={() => { initial ? hover.reverse() : ''}}
-  >
+  <button class="attribution-btn" on:click={toggleAnimation}>
     <img class="giraffe" src="/assets/images/shared/giraffe.png" alt="">
   </button>
   <div class="bubble-wrapper">
