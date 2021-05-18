@@ -44,6 +44,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 16rem));
     gap: 1.5rem;
+    overflow: hidden;
   }
 
   .feature-img-container {
