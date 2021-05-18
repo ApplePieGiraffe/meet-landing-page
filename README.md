@@ -25,6 +25,8 @@ The only trouble I had was combining all of these tools and getting them to work
 
 I think some things like the tablet/mobile animations and perhaps accessibility might need some tweaking. I'm always open to ideas and suggestions, so please do let me know if you have anything to say! 👍
 
+Also, for some reason, if you resize the screen (especially with the responsive dev tools), sometimes the layout breaks a little (IDK why—something to do with ScrollTrigger perhaps?). You might need to refresh the page, then. 🙃
+
 Besides that...
 
 Scroll past the hero section and back again to toggle between the original avatars/the avatars of some of my favorite people on Frontend Mentor! 😆
