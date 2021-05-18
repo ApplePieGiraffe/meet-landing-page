@@ -19,7 +19,7 @@
 
   onMount(() => {
     const observer = new IntersectionObserver(toggleAvatars, { threshold: 0 })
-    observer.observe(document.querySelector('.hero-content'))
+    observer.observe(document.querySelector('.hero-side'))
   })
 </script>
 
@@ -105,6 +105,7 @@
 
   .hero-side img {
     width: 55px;
+    border-radius: 50%;
   }
 
   .hero-side-left {
@@ -145,7 +146,6 @@
 
     .hero-side img {
       width: 90px;
-      border-radius: 50%;
     }
 
     .hero-side-left {
