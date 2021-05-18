@@ -5,12 +5,12 @@ export const avatars = [
 '/assets/images/shared/avatars/avatar-left-4.png',
 '/assets/images/shared/avatars/avatar-left-5.png',
 '/assets/images/shared/avatars/avatar-left-6.png',
-'assets/images/shared/avatars/avatar-right-1.png',
-'assets/images/shared/avatars/avatar-right-2.png',
-'assets/images/shared/avatars/avatar-right-3.png',
-'assets/images/shared/avatars/avatar-right-4.png',
-'assets/images/shared/avatars/avatar-right-5.png',
-'assets/images/shared/avatars/avatar-right-6.png',
+'/assets/images/shared/avatars/avatar-right-1.png',
+'/assets/images/shared/avatars/avatar-right-2.png',
+'/assets/images/shared/avatars/avatar-right-3.png',
+'/assets/images/shared/avatars/avatar-right-4.png',
+'/assets/images/shared/avatars/avatar-right-5.png',
+'/assets/images/shared/avatars/avatar-right-6.png',
 ]
 
 export const fmAvatars = [

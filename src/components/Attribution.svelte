@@ -43,7 +43,12 @@
     <img class="bubble" src="/assets/images/shared/attribution/bubble.png" alt="">
     <div class="attribution-text">
       <span>Challenge by</span>
-      <a href="/" target="_blank">Frontend Mentor</a>
+      <a 
+        href="https://www.frontendmentor.io/solutions/meet-landing-page-svelte-gsap-3r4x3DG5v" 
+        target="_blank"
+      >
+        Frontend Mentor
+      </a>
       <span>Coded by</span>
       <a 
         href="https://www.frontendmentor.io/profile/ApplePieGiraffe" 

@@ -5,23 +5,20 @@
   import Heading from '../components/Heading.svelte'
   import Link from '../components/Link.svelte'
 
-  import { replaceImages } from '../scripts/utilities'
   import { avatars, fmAvatars } from '../scripts/data'
 
-  let original = true
+  let initial = true
+  let imgs = avatars
 
   function toggleAvatars(e) {
-    console.log(e[0])
     if (!e[0].isIntersecting) {
-      replaceImages('.hero-side img', original ? fmAvatars : avatars)
-      original = !original
+      imgs = initial ? fmAvatars : avatars
+      initial = !initial
     }
   }
 
   onMount(() => {
-    const observer = new IntersectionObserver(toggleAvatars, {
-      threshold: 0
-    })
+    const observer = new IntersectionObserver(toggleAvatars, { threshold: 0 })
     observer.observe(document.querySelector('.hero-content'))
   })
 </script>
@@ -37,20 +34,20 @@
     </div>
   </div>
   <div class="hero-side hero-side-left">
-    <img src="/assets/images/shared/avatars/avatar-left-1.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-left-2.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-left-3.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-left-4.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-left-5.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-left-6.png" alt="">
+    <img src={imgs[0]} alt="">
+    <img src={imgs[1]} alt="">
+    <img src={imgs[2]} alt="">
+    <img src={imgs[3]} alt="">
+    <img src={imgs[4]} alt="">
+    <img src={imgs[5]} alt="">
   </div>
   <div class="hero-side hero-side-right">
-    <img src="/assets/images/shared/avatars/avatar-right-1.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-right-2.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-right-3.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-right-4.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-right-5.png" alt="">
-    <img src="/assets/images/shared/avatars/avatar-right-6.png" alt="">
+    <img src={imgs[6]} alt="">
+    <img src={imgs[7]} alt="">
+    <img src={imgs[8]} alt="">
+    <img src={imgs[9]} alt="">
+    <img src={imgs[10]} alt="">
+    <img src={imgs[11]} alt="">
   </div>
 </section>
 
