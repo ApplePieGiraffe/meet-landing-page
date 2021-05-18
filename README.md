@@ -23,7 +23,7 @@ The only trouble I had was combining all of these tools and getting them to work
 
 ### Notes
 
-I think some things like the tablet/mobile animations and perhaps accessibility might need some tweaking. I'm always open to ideas and suggestions, so go ahead if you'd like to mention anything to me! 👍
+I think some things like the tablet/mobile animations and perhaps accessibility might need some tweaking. I'm always open to ideas and suggestions, so please do let me know if you have anything to say! 👍
 
 Besides that...
 
@@ -32,5 +32,7 @@ Scroll past the hero section and back again to toggle between the original avata
 And click on the giraffe for the attribution! 😉
 
 ---
+
+[Frontend Mentor Solution](https://www.frontendmentor.io/solutions/meet-landing-page-svelte-gsap-3r4x3DG5v)
 
 Happy coding! 😄
