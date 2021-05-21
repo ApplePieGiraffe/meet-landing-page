@@ -40,6 +40,8 @@
     ScrollTrigger.defaults({ scroller: scroller })
 
     initAnimations()
+
+    document.querySelector('.scroll-container').focus()
   })
 </script>
 
@@ -47,7 +49,7 @@
   <Scroll/>
   <Attribution/>
 {/if}
-<div class="scroll-container">
+<div class="scroll-container" tabindex="-1">
   <Hero/>
   <Divider id="1"/>
   <Feature/>
